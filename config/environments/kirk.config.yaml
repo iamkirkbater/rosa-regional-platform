@@ -3,6 +3,5 @@ region_deployments:
     account_id: {}
     terraform_vars:
       enable_bastion: true
-      container_image: quay.io/redhat-services-prod/openshift/ocm-container:latest
     management_clusters:
       mc01: {}
