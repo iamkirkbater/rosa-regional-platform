@@ -6,3 +6,8 @@
 # Region: {{ aws_region }}
 
 {{ application_values | toyaml }}
+
+{% if cluster_type == "regional-cluster"%}
+pagerduty:
+  enabled: {{ regional_cluster.enable_pagerduty | lower }}
+{% endif %}
