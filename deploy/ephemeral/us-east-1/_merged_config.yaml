@@ -120,7 +120,7 @@ applications:
     pagerduty:
       # @doc applications.regional-cluster.pagerduty.enabled Enable PagerDuty alerting in the monitoring stack.
       # @used-by applications.regional-cluster.pagerduty.enabled _context
-      enabled: "{{ regional_cluster.enable_pagerduty | default(false) | lower }}"
+      enabled: "{{ regional_cluster.enable_pagerduty | default(false) | asbool }}"
 
 # provision_mcs: MC topology, defined per-region. Keys are MC IDs.
 # Fields below are injected into templates as mc.* by render.py.
